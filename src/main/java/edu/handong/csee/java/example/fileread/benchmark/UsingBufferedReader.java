@@ -7,12 +7,12 @@ import java.io.*;
  */
 public class UsingBufferedReader {
     public static void main(String[] args) throws IOException {
-
+    	
 
         //-------------- Test reading 1 MB file. --------------------
 
         StopWatch.start();
-
+        String file = args[0];
         BufferedReader inputStream= new BufferedReader(new FileReader(DumpDataWriter.input1MB));
         while (inputStream.read()!=-1){}
 
@@ -25,7 +25,7 @@ public class UsingBufferedReader {
         //-------------- Test reading 10 MB file. --------------------
 
         StopWatch.start();
-
+        String file2 = args[1];
         BufferedReader inputStream2= new BufferedReader(new FileReader(DumpDataWriter.input10MB));
         while (inputStream2.read()!=-1){}
 
